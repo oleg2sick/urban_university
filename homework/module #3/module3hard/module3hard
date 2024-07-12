@@ -1,22 +1,21 @@
 def calculate(args):
-  count = 0
-  if args == []:
-    return 0
+  count = 0                                       #создаем счетчик
 
-  if isinstance(args, dict) == True:
-    for k, v in args.items():
-      count += calculate(k)
-      count += calculate(v)
-
-  elif isinstance(args, str) == True:
+  if isinstance(args, str) == True:               #увеличиваем счет на длину строки, если нашлась строка
     count += len(args)
 
-  elif isinstance(args, int | float) == True:
+  elif isinstance(args, int | float) == True:     #увеличиваем счет на число, если нашли число
     count += args
+
+  elif isinstance(args, dict) == True:            #достаем key и value из словаря, если нашли словарь
+    for k, v in args.items():
+      count += calculate(k)                       #при помощи рекурсии обрабатываем содержимое словарей, списков, кортежей и множеств и прибавляем к счетчику, если были найдены числа или строки
+      count += calculate(v)
 
   elif isinstance(args, list | tuple | set) == True:
     for i in args:
       count += calculate(i)
+
   return count
 
 
