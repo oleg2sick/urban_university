@@ -1,0 +1,9 @@
+from math import inf
+
+def divide(first, second):
+    if isinstance(first, int | float) == False or isinstance(second, int | float) == False:
+        return 'Ошибка'
+    elif second == 0:
+        return inf
+    else:
+        return first / second
