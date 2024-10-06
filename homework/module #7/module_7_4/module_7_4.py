@@ -4,17 +4,12 @@ def teams_num(team1, team1_num, team2, team2_num):
     print('Итого сегодня в командах участников: %s и %s !' % (team1_num, team2_num))
 
 
-# Использование format:
-
-
 def teams_time(team1, score1, team1_time, team2, score2, team2_time):
     print('Команда {} решила задач: {}!'.format(team1, score1))
     print('{} решили задачи за {} cек. !'.format(team1, team1_time))
     print('Команда {} решила задач: {}!'.format(team2, score2))
     print('{} решили задачи за {} cек. !'.format(team2, team2_time))
 
-
-# Использование f-строк:
 
 def competition_res(tasks_total, time_avg):
     print(f'Команды решили {score1} и {score2} задач')
