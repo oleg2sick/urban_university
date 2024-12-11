@@ -11,8 +11,8 @@ dp = Dispatcher(bot, storage=MemoryStorage())
 kb = ReplyKeyboardMarkup(resize_keyboard=True)
 button1 = KeyboardButton(text = 'Рассчитать')
 button2 = KeyboardButton(text = 'Информация')
-kb.row(button1)
-kb.row(button2)
+kb.add(button1)
+kb.add(button2)
 
 @dp.message_handler(commands=['start'])
 async def start(message):
