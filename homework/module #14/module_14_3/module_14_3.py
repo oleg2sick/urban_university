@@ -35,13 +35,13 @@ new_kb.add(inline_button2)
 
 @dp.message_handler(text='Купить')
 async def get_buying_list(message):
-    with open('venv/pcs/pencil-500x421.png', 'rb') as img1:
+    with open('./pencil-500x421.png', 'rb') as img1:
         await message.answer_photo(img1, 'Название: ручка | Описание: синяя | Цена: 100')
-    with open('venv/pcs/karandashi_206741254588e98_800x600.png', 'rb') as img2:
+    with open('./karandashi_206741254588e98_800x600.png', 'rb') as img2:
         await message.answer_photo(img2, 'Название: карандаш | Описание: мягкий | Цена: 200')
-    with open('venv/pcs/a63d991d7677c1b03538189328a79b9d.png', 'rb') as img3:
+    with open('./a63d991d7677c1b03538189328a79b9d.png', 'rb') as img3:
         await message.answer_photo(img3, 'Название: кисть | Описание: тонкая | Цена: 300')
-    with open('venv/pcs/1609316212_131432.png', 'rb') as img4:
+    with open('./1609316212_131432.png', 'rb') as img4:
         await message.answer_photo(img4, 'Название: фломастер | Описание: синий | Цена: 400')
     await message.answer('Выберите продукт для покупки:', reply_markup=buy_kb)
 
