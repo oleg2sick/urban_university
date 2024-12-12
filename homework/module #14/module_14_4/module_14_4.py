@@ -40,13 +40,13 @@ products = crud_functions.get_all_products()
 
 @dp.message_handler(text='Купить')
 async def get_buying_list(message):
-    with open('venv/pcs/pencil-500x421.png', 'rb') as img1:
+    with open('./pencil-500x421.png', 'rb') as img1:
         await message.answer_photo(img1, f'Название: {products[0][1]} | Описание: {products[0][2]} | Цена: {products[0][3]}')
-    with open('venv/pcs/karandashi_206741254588e98_800x600.png', 'rb') as img2:
+    with open('./karandashi_206741254588e98_800x600.png', 'rb') as img2:
         await message.answer_photo(img2, f'Название: {products[1][1]} | Описание: {products[1][2]} | Цена: {products[1][3]}')
-    with open('venv/pcs/a63d991d7677c1b03538189328a79b9d.png', 'rb') as img3:
+    with open('./a63d991d7677c1b03538189328a79b9d.png', 'rb') as img3:
         await message.answer_photo(img3, f'Название: {products[2][1]} | Описание: {products[2][2]} | Цена: {products[2][3]}')
-    with open('venv/pcs/1609316212_131432.png', 'rb') as img4:
+    with open('./1609316212_131432.png', 'rb') as img4:
         await message.answer_photo(img4, f'Название: {products[3][1]} | Описание: {products[3][2]} | Цена: {products[3][3]}')
     await message.answer('Выберите продукт для покупки:', reply_markup=buy_kb)
 
