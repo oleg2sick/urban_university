@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Games</title>
+    <title>{{ title }}</title>
 </head>
 <body>
-    <h1>Игры</h1>
+    <h1>{{ title }}</h1>
     <ul>
-        <li>Atomic Heart<button>Купить</button></li>
-        <li>Cyberpunk 2077<button>Купить</button></li>
-        <li>PayDay 2<button>Купить</button></li>
+        {{ for game in games }}
+        <li> {{ game }} <button>Купить</button></li>
+        {{ endfor }}
     </ul>
     <button><a href="/platform">Вернуться обратно</a></button>
 </body>

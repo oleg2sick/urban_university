@@ -1,19 +1,23 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+#from django.views.generic import TemplateView
 # Create your views here.
 
 
-class Welcome(TemplateView):
-    template_name = 'third_task/welcome.html'
+def index(request):
+    context = {
+        'title': 'Главная страница'
+    }
+    return render(request, 'third_task/main_page.html', context)
 
+def game(request):
+    context = {
+        'title': 'Игры',
+        'first': ['Atomic Heart', 'Cyberpunk 2077', 'PayDay 2']
+    }
+    return render(request, 'third_task/games.html', context)
 
-class MainPage(TemplateView):
-    template_name = 'third_task/main_page.html'
-
-
-class Games(TemplateView):
-    template_name = 'third_task/games.html'
-
-
-class Cart(TemplateView):
-    template_name = 'third_task/cart.html'
+def cart(request):
+    context = {
+        'title': 'Корзина'
+    }
+    return render(request, 'third_task/cart.html', context)
