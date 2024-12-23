@@ -12,7 +12,7 @@ def index(request):
 def games(request):
     context = {
         'title': 'Игры',
-        'first': ['Atomic Heart', 'Cyberpunk 2077', 'PayDay 2']
+        'games': ['Atomic Heart', 'Cyberpunk 2077', 'PayDay 2']
     }
     return render(request, 'fourth_task/games.html', context)
 
