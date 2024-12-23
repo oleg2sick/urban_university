@@ -7,9 +7,9 @@ def index(request):
     context = {
         'title': 'Главная страница'
     }
-    return render(request, 'third_task/main_page.html', context)
+    return render(request, 'third_task/index.html', context)
 
-def game(request):
+def games(request):
     context = {
         'title': 'Игры',
         'first': ['Atomic Heart', 'Cyberpunk 2077', 'PayDay 2']

@@ -7,9 +7,9 @@
 <body>
     <h1>{{ title }}</h1>
     <ul>
-        {{ for game in games }}
+        {% for game in games %}
         <li> {{ game }} <button>Купить</button></li>
-        {{ endfor }}
+        {% endfor %}
     </ul>
     <button><a href="/platform">Вернуться обратно</a></button>
 </body>
